@@ -11,6 +11,8 @@ import {
   Text,
   View
 } from 'react-native';
+import SplashScreen from 'react-native-splash-screen'
+import { RkButton } from 'react-native-ui-kitten'
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
@@ -20,6 +22,12 @@ const instructions = Platform.select({
 });
 
 export default class App extends Component {
+  componentDidMount() {
+    // do stuff while splash screen is shown
+      // After having done stuff (such as async tasks) hide the splash screen
+      SplashScreen.hide();
+  }
+
   render() {
     return (
       <View style={styles.container}>
@@ -32,6 +40,7 @@ export default class App extends Component {
         <Text style={styles.instructions}>
           {instructions}
         </Text>
+        <RkButton>Click me!</RkButton>
       </View>
     );
   }
