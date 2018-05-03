@@ -1,4 +1,4 @@
-import { AppRegistry } from 'react-native';
-import App from './App';
+import { AppRegistry } from 'react-native'
+import { SuperNovelReader } from './src'
 
-AppRegistry.registerComponent('superleitorapp', () => App);
+AppRegistry.registerComponent('superleitorapp', () => SuperNovelReader)
