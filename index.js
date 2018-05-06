@@ -1,4 +1,3 @@
-import { AppRegistry } from 'react-native'
-import { SuperNovelReader } from './src'
+import { initializeApp } from './src/config'
 
-AppRegistry.registerComponent('superleitorapp', () => SuperNovelReader)
+initializeApp()
