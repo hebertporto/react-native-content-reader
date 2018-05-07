@@ -1,0 +1,1 @@
+export const NOVEL_SET_NOVEL = 'NOVEL_SET_NOVEL'
