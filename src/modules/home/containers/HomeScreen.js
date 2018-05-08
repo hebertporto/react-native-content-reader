@@ -1,29 +1,57 @@
 import React, { Component } from 'react'
 import { View, Text, Button } from 'react-native'
+import { NOVEL_SCREEN } from '../../../navigation/routes'
 
 class HomeContainer extends Component {
-  componentDidMount = () => {
-    console.log('### didMount Home ###')
-    this.props.navigator.setStyle({
-      navBarBackgroundColor: 'blue'
-    })
+  static navigatorButtons = {
+    rightButtons: [
+      {
+        title: 'Edit',
+        id: 'edit',
+        disabled: false,
+        disableIconTint: true,
+        showAsAction: 'ifRoom',
+        buttonColor: 'blue',
+        buttonFontSize: 14,
+        buttonFontWeight: '600'
+      }
+    ],
+    leftButtons: [
+      {
+        title: 'aa',
+        id: 'aa',
+        disabled: false,
+        disableIconTint: true,
+        showAsAction: 'ifRoom',
+        buttonFontSize: 14,
+        buttonFontWeight: '600'
+      }
+    ]
   }
 
-  componentWillUnmount = () => {
-    console.log('### WillUnmount Home ###')
+  componentDidMount = () => {
+    this.props.navigator.setOnNavigatorEvent(this.onNavigatorEvent)
+  }
+
+  onNavigatorEvent = (event) => {
+    if (event.type === 'NavBarButtonPress') {
+      if (event.id === 'edit') {
+        console.log('### alert ###')
+      }
+      if (event.id === 'login') {
+        console.log('### alert ###')
+      }
+    }
   }
 
   click = () => {
-    return this.props.navigator.push({
-      screen: 'snr.novel', // unique ID registered with Navigation.registerScreen
-      title: 'Novel', // navigation bar title of the pushed screen (optional)
-      subtitle: 'subtitle 2' // navigation bar subtitle of the pushed screen (optional)
-    })
+    return this.props.navigator.push(NOVEL_SCREEN)
   }
+
   render () {
     return (
       <View>
-        <Text>Sou Home Screen</Text>
+        <Text>Sou Home Screen com component</Text>
         <Button
           onPress={this.click}
           title="Novel"
