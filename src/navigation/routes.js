@@ -1,8 +1,12 @@
+import { Fonts } from '../constants/fonts'
+
 const style = {
   navBarTextColor: '#FFFFFF',
   navBarBackgroundColor: '#2196F3',
   navBarTitleTextCentered: true,
-  navBarButtonColor: '#FFFFFF'
+  navBarButtonColor: '#FFFFFF',
+  navBarTextFontFamily: Fonts.type.emphasis,
+  navBarTextFontSize: Fonts.size.regular
 }
 
 export const HOME_SCREEN = {
