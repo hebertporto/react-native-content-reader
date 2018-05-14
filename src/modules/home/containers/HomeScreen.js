@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { View, Text, Button, StyleSheet } from 'react-native'
 import { NOVEL_SCREEN } from '../../../navigation/routes'
 import { Fonts } from '../../../constants/fonts'
+import Icon from 'react-native-vector-icons/FontAwesome'
 
 class HomeContainer extends Component {
   static navigatorButtons = {
@@ -52,9 +53,10 @@ class HomeContainer extends Component {
   render () {
     return (
       <View style={styles.container}>
-        <Text style={styles.text}>Sou Home Screen com component</Text>
-        <Text style={styles.text2}>Texto com OpenSans</Text>
-        <Text>Texto sem OpenSans</Text>
+        <Text style={styles.text}>Sou Home Screen com Kefa</Text>
+        <Text style={styles.text2}>Texto com SourceSans</Text>
+        <Text>Font padrão </Text>
+        <Icon name="rocket" size={30} color="#900" />
         <Button
           onPress={this.click}
           title="Novel"
