@@ -1,40 +1,10 @@
 import React, { Component } from 'react'
 import { View, Text, Button, StyleSheet } from 'react-native'
-import { NOVEL_SCREEN } from '../../../navigation/routes'
 import { Fonts } from '../../../constants/fonts'
-import Icon from 'react-native-vector-icons/FontAwesome'
+
+import { NOVEL_SCREEN } from '../../../navigation/routes'
 
 class HomeContainer extends Component {
-  static navigatorButtons = {
-    rightButtons: [
-      {
-        title: 'Edit',
-        id: 'edit',
-        disabled: false,
-        disableIconTint: true,
-        showAsAction: 'ifRoom',
-        buttonColor: 'blue',
-        buttonFontSize: 14,
-        buttonFontWeight: '600'
-      }
-    ],
-    leftButtons: [
-      {
-        title: 'aa',
-        id: 'aa',
-        disabled: false,
-        disableIconTint: true,
-        showAsAction: 'ifRoom',
-        buttonFontSize: 14,
-        buttonFontWeight: '600'
-      }
-    ]
-  }
-
-  componentDidMount = () => {
-    this.props.navigator.setOnNavigatorEvent(this.onNavigatorEvent)
-  }
-
   onNavigatorEvent = (event) => {
     if (event.type === 'NavBarButtonPress') {
       if (event.id === 'edit') {
@@ -54,9 +24,9 @@ class HomeContainer extends Component {
     return (
       <View style={styles.container}>
         <Text style={styles.text}>Sou Home Screen com Kefa</Text>
-        <Text style={styles.text2}>Texto com SourceSans</Text>
+        <Text style={styles.text2}>Texto com Alegreya-Regular</Text>
+        <Text style={styles.text3}>Texto com SourceSansPro-Black</Text>
         <Text>Font padrão </Text>
-        <Icon name="rocket" size={30} color="#900" />
         <Button
           onPress={this.click}
           title="Novel"
@@ -77,6 +47,9 @@ const styles = StyleSheet.create({
   },
   text2: {
     fontFamily: Fonts.type.base
+  },
+  text3: {
+    fontFamily: Fonts.type.emphasis
   }
 })
 export const HomeScreen = HomeContainer

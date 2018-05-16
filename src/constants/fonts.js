@@ -1,8 +1,8 @@
 const type = {
   kefa: 'kefa',
-  base: 'SourceSansPro-Regular',
-  bold: 'kefa',
-  emphasis: 'SourceSansPro-Black'
+  base: 'Alegreya-Regular',
+  bold: 'Alegreya-Bold',
+  emphasis: 'Alegreya-Italic'
 }
 
 const size = {

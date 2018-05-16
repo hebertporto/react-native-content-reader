@@ -8,6 +8,11 @@ export const Colors = {
 
   // Standard background color
   screen: '#F2F2F5',
+  // Navbar
+  navbarBackground: '#2196F3',
+  // Tabs
+  tabBarButtonColor: '#0C0707',
+  tabBarSelectedButtonColor: '#2F4958',
 
   // Dark colors
   gray900: '#030303',
