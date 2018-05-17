@@ -8,13 +8,13 @@ export const ItemNovel = props => (
   <TouchableOpacity
     style={styles.container}
     onPress={() => console.warn('clicou na novel')}>
-    <View style={styles.imageContainer}>
+    <View elevation={5} style={styles.imageContainer}>
       <Image
-        source={{ uri: 'http://res.cloudinary.com/dwvrdf3zg/image/upload/v1510765331/gnoadvlyv9t9zv4h2ery.png' }}
+        source={{ uri: props.novel.cover_url }}
         style={styles.image}
       />
     </View>
-    <Text style={styles.title} numberOfLines={2}>A Crônica de Eastar</Text>
+    <Text style={styles.title} numberOfLines={2}>{props.novel.name}</Text>
   </TouchableOpacity>
 )
 
