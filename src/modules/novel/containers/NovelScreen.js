@@ -7,11 +7,11 @@ class NovelContainer extends Component {
       {
         title: 'aa',
         id: 'aa',
-        disabled: false, // optional, used to disable the button (appears faded and doesn't interact)
-        disableIconTint: true, // optional, by default the image colors are overridden and tinted to navBarButtonColor, set to true to keep the original image colors
-        showAsAction: 'ifRoom', // optional, Android only.
-        buttonFontSize: 14, // Set font size for the button (can also be used in setButtons function to set different button style programatically)
-        buttonFontWeight: '600' // Set font weight for the button (can also be used in setButtons function to set different button style programatically)
+        disabled: false,
+        disableIconTint: true,
+        showAsAction: 'ifRoom',
+        buttonFontSize: 14,
+        buttonFontWeight: '600'
       }
     ]
   }

@@ -1,3 +1,5 @@
+import { Platform } from 'react-native'
+
 const type = {
   kefa: 'kefa',
   base: 'Alegreya-Regular',
@@ -19,7 +21,81 @@ const size = {
   tiny: 11
 }
 
+const style = {
+  navbarTitle: {
+    fontFamily: type.kefa,
+    fontSize: size.h5
+  },
+  title: {
+    fontFamily: type.kefa,
+    fontSize: size.h3
+  },
+  h1: {
+    fontFamily: type.base,
+    fontSize: size.h1
+  },
+  h2: {
+    fontWeight: 'bold',
+    fontSize: size.h2
+  },
+  h3: {
+    fontFamily: type.base,
+    fontSize: size.h3
+  },
+  h4: {
+    fontFamily: type.base,
+    fontSize: size.h4
+  },
+  h5: {
+    fontFamily: type.base,
+    fontSize: size.h5
+  },
+  h6: {
+    fontFamily: type.bold,
+    fontSize: size.h6
+  },
+  normalKefa: {
+    fontFamily: type.kefa,
+    fontSize: size.regular
+  },
+  bold: {
+    fontFamily: type.bold,
+    fontSize: size.regular
+  },
+  normal: {
+    fontFamily: type.base,
+    fontSize: size.regular
+  },
+  description: {
+    fontFamily: type.base,
+    fontSize: size.medium
+  },
+  heavyDescription: {
+    ...Platform.select({
+      android: {
+        fontFamily: 'sans-serif-medium'
+      },
+      ios: {
+        fontWeight: '700'
+      }
+    }),
+    fontSize: size.medium
+  },
+  input: {
+    fontFamily: type.base,
+    fontSize: size.input
+  },
+  footnote: {
+    fontFamily: type.base,
+    fontSize: size.small
+  },
+  caption: {
+    fontFamily: type.base,
+    fontSize: size.tiny
+  }
+}
 export const Fonts = {
   type,
-  size
+  size,
+  style
 }
