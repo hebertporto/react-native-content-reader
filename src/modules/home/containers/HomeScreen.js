@@ -5,6 +5,7 @@ import { SearchBar } from '../components/SearchBar'
 import { ListNovels } from '../components/ListNovels'
 
 import { getAllNovels } from '../../../services/backend/novelService'
+import { NOVEL_SCREEN } from '../../../navigation/routes'
 
 class HomeContainer extends Component {
   state = {
@@ -20,11 +21,16 @@ class HomeContainer extends Component {
     console.log('novels', novels)
   }
 
+  navigateToNovel = () => this.props.navigator.push(NOVEL_SCREEN)
+
   render () {
     return (
       <View style={styles.container}>
         <SearchBar />
-        <ListNovels novels={this.state.novels} />
+        <ListNovels
+          novels={this.state.novels}
+          navigateToNovel={(novel) => this.navigateToNovel(novel)}
+        />
       </View>
     )
   }

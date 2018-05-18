@@ -5,7 +5,7 @@ import { FlatList } from 'react-native'
 import { ItemNovel } from './ItemNovel'
 
 class ListNovelsContainer extends Component {
-  renderNovel = ({ item }) => <ItemNovel novel={item} />
+  renderNovel = ({ item }) => <ItemNovel novel={item} navigateToNovel={this.props.navigateToNovel} />
   keyExtractor = item => item._id.toString()
   render() {
     return (

@@ -7,7 +7,7 @@ import { styles } from './styles/ItemNovel.style'
 export const ItemNovel = props => (
   <TouchableOpacity
     style={styles.container}
-    onPress={() => console.warn('clicou na novel')}>
+    onPress={() => props.navigateToNovel()}>
     <View elevation={5} style={styles.imageContainer}>
       <Image
         source={{ uri: props.novel.cover_url }}

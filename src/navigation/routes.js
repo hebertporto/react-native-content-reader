@@ -23,12 +23,12 @@ export const NOVEL_SCREEN = {
 
 export const BOOKMARK_SCREEN = {
   screen: 'snr.bookmark',
-  title: 'Bookmark',
+  title: 'Favoritos',
   navigatorStyle: style
 }
 
 export const OFFLINE_SCREEN = {
   screen: 'snr.offline',
-  title: 'Offline',
+  title: 'Conteúdo Offline',
   navigatorStyle: style
 }
