@@ -5,7 +5,7 @@ const style = {
   navBarBackgroundColor: '#2196F3',
   navBarTitleTextCentered: true,
   navBarButtonColor: '#FFFFFF',
-  navBarTextFontFamily: Fonts.type.emphasis,
+  navBarTextFontFamily: Fonts.type.kefa,
   navBarTextFontSize: Fonts.size.regular
 }
 
@@ -18,5 +18,17 @@ export const HOME_SCREEN = {
 export const NOVEL_SCREEN = {
   screen: 'snr.novel',
   title: 'Novel',
+  navigatorStyle: style
+}
+
+export const BOOKMARK_SCREEN = {
+  screen: 'snr.bookmark',
+  title: 'Bookmark',
+  navigatorStyle: style
+}
+
+export const OFFLINE_SCREEN = {
+  screen: 'snr.offline',
+  title: 'Offline',
   navigatorStyle: style
 }
