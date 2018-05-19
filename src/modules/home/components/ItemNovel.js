@@ -14,7 +14,12 @@ export const ItemNovel = props => (
         style={styles.image}
       />
     </View>
-    <Text style={styles.title} numberOfLines={2}>{props.novel.name}</Text>
+    <Text
+      style={styles.title}
+      numberOfLines={2}
+    >
+      {props.novel.name}
+    </Text>
   </TouchableOpacity>
 )
 
