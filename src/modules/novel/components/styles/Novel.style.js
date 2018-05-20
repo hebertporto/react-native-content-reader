@@ -34,7 +34,6 @@ export const styles = StyleSheet.create({
   bodyContainer: {
     flex: 1,
     flexDirection: 'column',
-    alignItems: 'center',
     width: boxWidth,
     borderRadius: 10,
     borderWidth: 0,
@@ -43,12 +42,22 @@ export const styles = StyleSheet.create({
   },
   bodyContent: {
     paddingTop: textPadding,
-    flex: 1,
-    alignItems: 'center'
+    flex: 1
   },
   title: {
     ...Fonts.style.h6,
     color: '#000',
     textAlign: 'center'
+  },
+  scanContainer: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingLeft: 15,
+    paddingRight: 15
+  },
+  labelContainer: {
+    flex: 1,
+    flexDirection: 'row'
   }
 })

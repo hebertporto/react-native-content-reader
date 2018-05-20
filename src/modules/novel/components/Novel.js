@@ -6,6 +6,8 @@ import {
   ScrollView,
   Image
 } from 'react-native'
+import Divider from '../../shared/components/Divider'
+import Icon from 'react-native-vector-icons/FontAwesome'
 
 import { styles } from './styles/Novel.style.js'
 
@@ -32,9 +34,31 @@ const Novel = () => {
               Rebirth of the Thief Who Roamed the World
             </Text>
           </View>
-          <View>
-            <Text>Autor, Scan, Tradutor, Revisor</Text>
+          <Divider />
+          <View style={styles.scanContainer}>
+            <View style={styles.labelContainer}>
+              <Icon name="rocket" size={30} color="#900" />
+              <Text>Sakai Scan</Text>
+            </View>
+
+            <View style={styles.labelContainer}>
+              <Text>|Z|</Text>
+              <Text>Eu Sou Autor</Text>
+            </View>
           </View>
+
+          <View style={styles.scanContainer}>
+            <View style={styles.labelContainer}>
+              <Text>|Z|</Text>
+              <Text>Sakai Scan</Text>
+            </View>
+
+            <View style={styles.labelContainer}>
+              <Text>|Z|</Text>
+              <Text>Eu Sou Autor</Text>
+            </View>
+          </View>
+
           <View>
             <Text>Capítulos</Text>
           </View>
