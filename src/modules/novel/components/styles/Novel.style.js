@@ -59,5 +59,16 @@ export const styles = StyleSheet.create({
   labelContainer: {
     flex: 1,
     flexDirection: 'row'
+  },
+  labelContainerText: {
+    ...Fonts.style.tiny,
+    lineHeight: 16,
+    paddingLeft: 2,
+    width: 150
+  },
+  labelContainerTextChapter: {
+    ...Fonts.style.tiny,
+    lineHeight: 16,
+    paddingLeft: 2
   }
 })

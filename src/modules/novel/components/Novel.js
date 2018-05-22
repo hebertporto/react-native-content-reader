@@ -41,19 +41,20 @@ const Novel = () => {
           <View style={styles.scanContainer}>
             <View style={styles.labelContainer}>
               <Icon name="account-circle" size={14} />
-              <Text>Henrique Zimmerer</Text>
+              <Text style={styles.labelContainerText}>Henrique Zimmerer Zimmerer Zimmerer</Text>
             </View>
 
             <View style={styles.labelContainer}>
-              <Icon name="translate" size={14} />
-              <Text>Sakai Scan</Text>
+              <Icon name="translate" size={14} style={{ marginLeft: 25 }}/>
+              <Text style={styles.labelContainerText}>Sakai Scan</Text>
             </View>
           </View>
 
           <View style={styles.scanContainer}>
-            <Text>100</Text>
-            <Text>A espada mágica de ultron</Text>
-            <Text>20/02/2018</Text>
+            <Icon name="book" size={14} />
+            <Text style={styles.labelContainerTextChapter}>100</Text>
+            <Text style={styles.labelContainerTextChapter}>A espada mágica de ultron</Text>
+            <Text style={styles.labelContainerTextChapter}>20/02/2018</Text>
           </View>
 
           <View style={styles.scanContainer}>
