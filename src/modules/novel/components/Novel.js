@@ -7,9 +7,10 @@ import {
   Image
 } from 'react-native'
 import Divider from '../../shared/components/Divider'
-import Icon from 'react-native-vector-icons/FontAwesome'
+import Icon from 'react-native-vector-icons/MaterialIcons'
 
 import { styles } from './styles/Novel.style.js'
+import ChapterList from './ChapterList'
 
 const Novel = () => {
   return (
@@ -34,44 +35,35 @@ const Novel = () => {
               Rebirth of the Thief Who Roamed the World
             </Text>
           </View>
+
           <Divider />
-          <View style={styles.scanContainer}>
-            <View style={styles.labelContainer}>
-              <Icon name="rocket" size={30} color="#900" />
-              <Text>Sakai Scan</Text>
-            </View>
-
-            <View style={styles.labelContainer}>
-              <Text>|Z|</Text>
-              <Text>Eu Sou Autor</Text>
-            </View>
-          </View>
 
           <View style={styles.scanContainer}>
             <View style={styles.labelContainer}>
-              <Text>|Z|</Text>
-              <Text>Sakai Scan</Text>
+              <Icon name="account-circle" size={14} />
+              <Text>Henrique Zimmerer</Text>
             </View>
 
             <View style={styles.labelContainer}>
-              <Text>|Z|</Text>
-              <Text>Eu Sou Autor</Text>
+              <Icon name="translate" size={14} />
+              <Text>Sakai Scan</Text>
             </View>
           </View>
 
-          <View>
-            <Text>Capítulos</Text>
+          <View style={styles.scanContainer}>
+            <Text>100</Text>
+            <Text>A espada mágica de ultron</Text>
+            <Text>20/02/2018</Text>
           </View>
-          <View>
+
+          <View style={styles.scanContainer}>
             <Text>
               Descrição
             </Text>
           </View>
-          <View>
-            <Text>
-              Lista de Capítulos
-            </Text>
-          </View>
+
+          {/* <ChapterList chapters={[{_id: 1}, {_id: 2}, {_id: 3}, {_id: 4}, {_id: 5}]} /> */}
+
         </View>
       </ScrollView>
     </ImageBackground>
