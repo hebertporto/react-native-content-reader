@@ -1,9 +1,13 @@
 import React, { Component } from 'react'
-import { FlatList } from 'react-native'
-import ItemChapter from './ItemChapter'
+import { FlatList, View, Text } from 'react-native'
+// import ItemChapter from './ItemChapter'
 
 class ChapterList extends Component {
-  renderChapter = ({ item }) => <ItemChapter />
+  renderChapter = ({ item }) => (
+    <View>
+      <Text> Nome do Capitulo </Text>
+    </View>
+  )
   keyExtractor = item => item._id.toString()
   render () {
     return (

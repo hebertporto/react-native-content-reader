@@ -62,8 +62,9 @@ const Novel = () => {
               Descrição
             </Text>
           </View>
-
-          {/* <ChapterList chapters={[{_id: 1}, {_id: 2}, {_id: 3}, {_id: 4}, {_id: 5}]} /> */}
+          <View style={{ flex: 1 }}>
+            <ChapterList chapters={[{_id: 1}, {_id: 2}, {_id: 3}, {_id: 4}, {_id: 5}]} />
+          </View>
 
         </View>
       </ScrollView>
