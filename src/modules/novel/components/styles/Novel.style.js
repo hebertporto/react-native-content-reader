@@ -84,5 +84,10 @@ export const styles = StyleSheet.create({
     lineHeight: 16,
     paddingLeft: 2,
     marginLeft: 5
+  },
+  labelContainerTextDate: {
+    fontSize: 10,
+    lineHeight: 15,
+    paddingLeft: 2
   }
 })

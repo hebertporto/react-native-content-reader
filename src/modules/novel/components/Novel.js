@@ -58,8 +58,9 @@ const Novel = () => {
 
           <View style={styles.lastChapterContainer}>
             <Icon name="book" size={14} />
-            <Text style={styles.labelContainerTextChapter}>Último laçamento: #100</Text>
-            <Text style={styles.labelContainerTextChapter}>- 20/02/2018</Text>
+            <Text style={styles.labelContainerTextChapter}>#100 </Text>
+            <Icon name="book" size={14} />
+            <Text style={styles.labelContainerTextDate}>20/02/2018</Text>
           </View>
 
           <View style={styles.descriptionContainer}>
