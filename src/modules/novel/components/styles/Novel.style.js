@@ -51,10 +51,24 @@ export const styles = StyleSheet.create({
   },
   scanContainer: {
     flex: 1,
-    flexDirection: 'row',
+    flexDirection: 'column',
     justifyContent: 'space-between',
     paddingLeft: 15,
     paddingRight: 15
+  },
+  lastChapterContainer: {
+    flex: 1,
+    flexDirection: 'row',
+    paddingLeft: 15,
+    paddingRight: 15,
+    marginTop: 10
+  },
+  descriptionContainer: {
+    flex: 1,
+    flexDirection: 'row',
+    paddingLeft: 15,
+    paddingRight: 15,
+    marginTop: 10
   },
   labelContainer: {
     flex: 1,
@@ -63,12 +77,12 @@ export const styles = StyleSheet.create({
   labelContainerText: {
     ...Fonts.style.tiny,
     lineHeight: 16,
-    paddingLeft: 2,
-    width: 150
+    paddingLeft: 2
   },
   labelContainerTextChapter: {
     ...Fonts.style.tiny,
     lineHeight: 16,
-    paddingLeft: 2
+    paddingLeft: 2,
+    marginLeft: 5
   }
 })

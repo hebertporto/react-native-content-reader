@@ -1,13 +1,19 @@
 import React, { Component } from 'react'
 import { FlatList, View, Text } from 'react-native'
-// import ItemChapter from './ItemChapter'
+import {ChapterItemList} from './ChapterItemList'
 
 class ChapterList extends Component {
-  renderChapter = ({ item }) => (
-    <View>
-      <Text> Nome do Capitulo </Text>
+  renderFooter = () => (
+    <View style={{flex: 1}}>
+      <Text>
+        Rodape
+      </Text>
     </View>
   )
+  renderChapter = (data) => {
+    const { item, index } = data
+    return <ChapterItemList chapter={item} protected={index % 2 === 0}/>
+  }
   keyExtractor = item => item._id.toString()
   render () {
     return (
@@ -16,6 +22,7 @@ class ChapterList extends Component {
         numColumns={1}
         renderItem={this.renderChapter}
         keyExtractor={this.keyExtractor}
+        ListFooterComponent={this.renderFooter}
       />
     )
   }
