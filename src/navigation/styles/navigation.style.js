@@ -8,7 +8,7 @@ export const navigatorStyleNovels = {
   navBarButtonColor: Colors.white,
   navBarTextFontFamily: Fonts.type.bold,
   navBarTextFontSize: Fonts.size.h6,
-  navBarHidden: true
+  navBarHidden: false
 }
 
 export const navigatorStyleFavoritos = {

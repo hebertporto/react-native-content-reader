@@ -8,18 +8,20 @@ export const ItemNovel = props => (
   <TouchableOpacity
     style={styles.container}
     onPress={() => props.navigateToNovel()}>
-    <View elevation={5} style={styles.imageContainer}>
+    <View style={styles.imageContainer}>
       <Image
         source={{ uri: props.novel.cover_url }}
         style={styles.image}
       />
     </View>
-    <Text
-      style={styles.title}
-      numberOfLines={2}
-    >
-      {props.novel.name}
-    </Text>
+    <View style={styles.textContainer}>
+      <Text
+        style={styles.title}
+        numberOfLines={2}
+      >
+        {props.novel.name}
+      </Text>
+    </View>
   </TouchableOpacity>
 )
 

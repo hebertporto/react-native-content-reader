@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { View, StyleSheet } from 'react-native'
 
-import { SearchBar } from '../components/SearchBar'
 import { ListNovels } from '../components/ListNovels'
 
 import { getAllNovels } from '../../../services/backend/novelService'
@@ -26,7 +25,6 @@ class HomeContainer extends Component {
   render () {
     return (
       <View style={styles.container}>
-        <SearchBar />
         <ListNovels
           novels={this.state.novels}
           navigateToNovel={(novel) => this.navigateToNovel(novel)}

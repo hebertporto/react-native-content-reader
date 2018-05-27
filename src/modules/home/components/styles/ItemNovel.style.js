@@ -35,13 +35,12 @@ export const styles = StyleSheet.create({
     borderRadius: 10,
     ...StyleSheet.absoluteFillObject
   },
+  textContainer: {
+    height: 40
+  },
   title: {
     ...Fonts.style.description,
     marginTop: 4,
     textAlign: 'center'
-  },
-  genre: {
-    ...Fonts.style.description,
-    lineHeight: 14
   }
 })
