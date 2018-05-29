@@ -65,7 +65,7 @@ export const styles = StyleSheet.create({
   },
   descriptionContainer: {
     flex: 1,
-    flexDirection: 'row',
+    flexDirection: 'column',
     paddingLeft: 15,
     paddingRight: 15,
     marginTop: 10

@@ -2,21 +2,39 @@ import {
   StyleSheet
 } from 'react-native'
 // import { Fonts } from '../../../../constants/fonts'
+import { Colors } from '../../../../constants/colors'
 
 export const styles = StyleSheet.create({
-  listItem: {
+  row: {
     flexDirection: 'row',
     alignItems: 'center',
     padding: 8 * 2,
     borderBottomWidth: 1,
     borderBottomColor: 'rgba(179, 177, 177, 0.6)',
-    backgroundColor: 'white',
+    backgroundColor: 'transparent',
     flex: 1
   },
-  imageContainer2: {
-    marginRight: 8 * 2
+  containerNumber: {
+    flex: 0.15
   },
-  chapterTitle: {
+  containerTitle: {
+    flex: 0.67
+  },
+  containerDate: {
+    flex: 0.18,
+    backgroundColor: 'pink'
+  },
+  containerAd: {
     flex: 1
+  },
+  footerContainer: {
+    flex: 1,
+    alignItems: 'center',
+    padding: 16
+  },
+  button: {
+    backgroundColor: Colors.primaryBlue,
+    width: 150,
+    borderRadius: 25
   }
 })

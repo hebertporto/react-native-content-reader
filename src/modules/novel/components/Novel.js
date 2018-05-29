@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import {RkButton} from 'react-native-ui-kitten'
+
 import {
   ImageBackground,
   Text,
@@ -15,7 +17,13 @@ import ChapterList from './ChapterList'
 
 class Novel extends Component {
   state = {
-    fadeAnim: new Animated.Value(0.3) // Initial value for opacity: 0
+    fadeAnim: new Animated.Value(0.3),
+    hideFullDescription: true,
+    description: '',
+    novel: {
+      description: 'Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição'
+    },
+    textToogle: 'VER MAIS'
   }
   componentDidMount() {
     Animated.timing(
@@ -25,7 +33,32 @@ class Novel extends Component {
         duration: 1500
       }
     ).start()
+    this.renderDescription()
   }
+
+  toogleText = async () => {
+    await this.setState((prevState) => {
+      return { hideFullDescription: !prevState.hideFullDescription }
+    })
+    this.renderDescription()
+  }
+
+  renderDescription = async () => {
+    const description = this.state.novel.description
+
+    if (this.state.hideFullDescription) {
+      await this.setState({
+        description: `${description.slice(0, 100)}...`,
+        textToogle: 'VER MAIS'
+      })
+      return
+    }
+    await this.setState({
+      description,
+      textToogle: 'VER MENOS'
+    })
+  }
+
   render () {
     return (
       <ImageBackground
@@ -79,15 +112,29 @@ class Novel extends Component {
 
             <View style={styles.descriptionContainer}>
               <Text>
-                Descrição
+                {this.state.description}
               </Text>
+              <View style={styles.buttonWrapper}>
+                <RkButton
+                  onPress={this.toogleText}
+                >
+                  {this.state.textToogle}
+                </RkButton>
+              </View>
             </View>
 
             <Divider />
 
             <View style={{ flex: 1 }}>
               <ChapterList
-                chapters={[{_id: 1}, {_id: 2}, {_id: 3}, {_id: 4}, {_id: 5}, {_id: 6}, {_id: 7}]}
+                chapters={[
+                  {_id: 1},
+                  {_id: 2},
+                  {_id: 3},
+                  {_id: 4},
+                  {_id: 5},
+                  {_id: 6},
+                  {_id: 7}]}
               />
             </View>
 

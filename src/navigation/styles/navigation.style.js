@@ -6,7 +6,7 @@ export const navigatorStyleNovels = {
   navBarBackgroundColor: Colors.navbarBackground,
   navBarTitleTextCentered: true,
   navBarButtonColor: Colors.white,
-  navBarTextFontFamily: Fonts.type.bold,
+  // navBarTextFontFamily: Fonts.type.kefa,
   navBarTextFontSize: Fonts.size.h6,
   navBarHidden: false
 }

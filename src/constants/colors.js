@@ -1,5 +1,6 @@
 export const Colors = {
   // App identity colors
+  primaryBlue: '#2196F3',
   primary700: '#E63E2D', // darker
   primary500: '#FF5746', // main color
   primary300: '#FF9085', // lighter

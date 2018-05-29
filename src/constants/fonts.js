@@ -2,7 +2,7 @@ import { Platform } from 'react-native'
 
 const type = {
   kefa: 'kefa',
-  base: 'Alegreya-Regular',
+  base: 'Roboto',
   bold: 'Alegreya-Bold',
   emphasis: 'Alegreya-Italic'
 }
