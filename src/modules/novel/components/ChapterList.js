@@ -2,18 +2,18 @@ import React, { Component } from 'react'
 import { FlatList } from 'react-native'
 import {ChapterListRow, ChapterListFooter} from './ChapterItemsList'
 
+import VideoAd from '../../shared/components/VideoAd'
+
 class ChapterList extends Component {
   renderRow = (data) => {
     const { item, index } = data
-    return <ChapterListRow
+    return VideoAd(<ChapterListRow
       chapter={item}
       protected={index % 2 === 0}
-    />
+    />)
   }
 
-  renderFooter = (data) => {
-    const { item } = data
-    console.log('footer', item)
+  renderFooter = () => {
     return <ChapterListFooter />
   }
 
