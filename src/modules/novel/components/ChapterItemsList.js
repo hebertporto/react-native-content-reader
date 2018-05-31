@@ -4,7 +4,7 @@ import {RkButton} from 'react-native-ui-kitten'
 
 import { styles } from './styles/ItemChapter.style'
 
-export const ChapterListRow = props => (
+const rowChapter = (props) => (
   <TouchableOpacity onPress={() => console.warn('go chapter')}>
     <View style={styles.row}>
       <View style={styles.containerNumber}>
@@ -21,6 +21,15 @@ export const ChapterListRow = props => (
     </View>
   </TouchableOpacity>
 )
+const rowChapterProtected = (
+  <View style={styles.row}>
+    <Text> Clique no ADS </Text>
+  </View>
+)
+
+export const ChapterListRow = props => props.protected
+  ? rowChapterProtected
+  : rowChapter(props)
 
 export const ChapterListFooter = props => {
   return (

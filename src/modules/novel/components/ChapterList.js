@@ -1,23 +1,24 @@
 import React, { Component } from 'react'
 import { FlatList } from 'react-native'
 import {ChapterListRow, ChapterListFooter} from './ChapterItemsList'
-
-import VideoAd from '../../shared/components/VideoAd'
+import VideoReward from '../../shared/components/VideoAd'
 
 class ChapterList extends Component {
+  state = {
+    adVideo: false
+  }
   renderRow = (data) => {
     const { item, index } = data
-    return VideoAd(<ChapterListRow
+    return <ChapterListRow
       chapter={item}
       protected={index % 2 === 0}
-    />)
+    />
   }
-
-  renderFooter = () => {
-    return <ChapterListFooter />
-  }
-
+  hideVideoButton = () => this.setState({adVideo: true})
+  renderFooter = () => <ChapterListFooter />
+  renderHeader = () => <VideoReward showButton={this.state.adVideo} />
   keyExtractor = item => item._id.toString()
+
   render () {
     return (
       <FlatList
@@ -25,6 +26,7 @@ class ChapterList extends Component {
         numColumns={1}
         renderItem={this.renderRow}
         keyExtractor={this.keyExtractor}
+        ListHeaderComponent={this.renderHeader}
         ListFooterComponent={this.renderFooter}
       />
     )
