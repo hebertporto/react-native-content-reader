@@ -103,13 +103,6 @@ class Novel extends Component {
               </View>
             </View>
 
-            <View style={styles.lastChapterContainer}>
-              <Icon name="book" size={14} />
-              <Text style={styles.labelContainerTextChapter}>#100 </Text>
-              <Icon name="book" size={14} />
-              <Text style={styles.labelContainerTextDate}>20/02/2018</Text>
-            </View>
-
             <View style={styles.descriptionContainer}>
               <Text>
                 {this.state.description}

@@ -21,15 +21,13 @@ const rowChapter = (props) => (
     </View>
   </TouchableOpacity>
 )
-const rowChapterProtected = (
-  <View style={styles.row}>
-    <Text> Clique no ADS </Text>
-  </View>
-)
+// const rowChapterProtected = (
+//   <View style={styles.row}>
+//     <Text> Clique no ADS </Text>
+//   </View>
+// )
 
-export const ChapterListRow = props => props.protected
-  ? rowChapterProtected
-  : rowChapter(props)
+export const ChapterListRow = props => rowChapter(props)
 
 export const ChapterListFooter = props => {
   return (
