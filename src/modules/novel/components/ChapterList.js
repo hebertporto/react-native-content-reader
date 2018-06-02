@@ -27,7 +27,7 @@ class ChapterList extends Component {
         renderItem={this.renderRow}
         keyExtractor={this.keyExtractor}
         // ListHeaderComponent={this.renderHeader}
-        ListFooterComponent={this.renderFooter}
+        // ListFooterComponent={this.renderFooter}
       />
     )
   }

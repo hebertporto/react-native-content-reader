@@ -11,7 +11,7 @@ import {
   appStyleMain
 } from './styles/navigation.style'
 
-import { HOME_SCREEN, BOOKMARK_SCREEN, OFFLINE_SCREEN, NOVEL_SCREEN } from './routes'
+import { HOME_SCREEN, BOOKMARK_SCREEN, OFFLINE_SCREEN } from './routes'
 
 const store = createStore()
 
@@ -22,7 +22,7 @@ export function startApp () {
     tabs: [
       {
         label: 'Novels',
-        screen: NOVEL_SCREEN.screen,
+        screen: HOME_SCREEN.screen,
         icon: require('../assets/icons/interface.png'),
         title: HOME_SCREEN.title,
         navigatorStyle: navigatorStyleNovels

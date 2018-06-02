@@ -21,7 +21,12 @@ class Novel extends Component {
     hideFullDescription: true,
     description: '',
     novel: {
-      description: 'Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição'
+      _id: '',
+      author: '',
+      cover_url: '',
+      name: '',
+      translation_team: '',
+      description: ''
     },
     textToogle: 'VER MAIS'
   }
@@ -33,8 +38,16 @@ class Novel extends Component {
         duration: 1500
       }
     ).start()
+    this.setNovel(this.props.novel)
+  }
+
+  setNovel = async (novel) => {
+    await this.setState({novel})
     this.renderDescription()
   }
+  // componentWillReceiveProps(nextProps) {
+  //   console.log('component novel', nextProps)
+  // }
 
   toogleText = async () => {
     await this.setState((prevState) => {
@@ -60,26 +73,30 @@ class Novel extends Component {
   }
 
   render () {
+    const { name, cover_url, translation_team, author } = this.state.novel
+    // console.log('this.state', this.state)
     return (
       <ImageBackground
-        source={{
-          uri: 'http://res.cloudinary.com/dwvrdf3zg/image/upload/v1510765331/gnoadvlyv9t9zv4h2ery.png' }}
+        source={{ uri: cover_url }}
         style={styles.containerImageBackground}
       >
+        <View style={{width: '100%'}}>
+          <Icon name="arrow-back" size={30} style={{color: 'white'}}/>
+        </View>
         <ScrollView>
           <Animated.View style={[styles.imageCardContainer, {opacity: this.state.fadeAnim}]}>
             <View style={styles.imageBox}>
               <Image
                 style={styles.image}
                 source={{
-                  uri: 'http://res.cloudinary.com/dwvrdf3zg/image/upload/v1510765331/gnoadvlyv9t9zv4h2ery.png' }}
+                  uri: cover_url }}
               />
             </View>
           </Animated.View>
           <View style={styles.bodyContainer}>
             <View style={styles.bodyContent}>
               <Text style={styles.title}>
-                Rebirth of the Thief Who Roamed the World
+                {name}
               </Text>
             </View>
 
@@ -91,7 +108,7 @@ class Novel extends Component {
                 <Text
                   style={styles.labelContainerText}
                   numberOfLines={1}>
-                  Henrique Zimmerer Zimmerer Zimmerer Zimmerer
+                  {author}
                 </Text>
               </View>
             </View>
@@ -99,7 +116,7 @@ class Novel extends Component {
             <View style={[styles.scanContainer, {marginTop: 5}]}>
               <View style={styles.labelContainer}>
                 <Icon name="translate" size={14} />
-                <Text style={styles.labelContainerText}>Sakai Scan</Text>
+                <Text style={styles.labelContainerText}>{translation_team}</Text>
               </View>
             </View>
 
@@ -110,7 +127,11 @@ class Novel extends Component {
               <View style={styles.buttonWrapper}>
                 <RkButton
                   onPress={this.toogleText}
+                  style={styles.button}
+                  contentStyle={styles.buttonContent}
+                  rkType='icon'
                 >
+                  <Icon name="visibility" size={18} color='white' />
                   {this.state.textToogle}
                 </RkButton>
               </View>

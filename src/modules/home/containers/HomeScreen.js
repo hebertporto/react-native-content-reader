@@ -20,7 +20,9 @@ class HomeContainer extends Component {
     console.log('novels', novels)
   }
 
-  navigateToNovel = () => this.props.navigator.push(NOVEL_SCREEN)
+  navigateToNovel = (novel) => {
+    this.props.navigator.push({...NOVEL_SCREEN, passProps: {novel}})
+  }
 
   render () {
     return (

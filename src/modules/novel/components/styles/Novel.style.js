@@ -1,5 +1,6 @@
 import { StyleSheet, Dimensions } from 'react-native'
 import { Fonts } from '../../../../constants/fonts'
+import { Colors } from '../../../../constants/colors'
 
 const { width } = Dimensions.get('window')
 
@@ -89,5 +90,19 @@ export const styles = StyleSheet.create({
     fontSize: 10,
     lineHeight: 15,
     paddingLeft: 2
+  },
+  buttonWrapper: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  button: {
+    height: 20,
+    width: 70,
+    marginTop: 15,
+    backgroundColor: Colors.primaryBlue
+  },
+  buttonContent: {
+    fontSize: 10
   }
 })

@@ -28,8 +28,7 @@ export const styles = StyleSheet.create({
     flex: 0.67
   },
   containerDate: {
-    flex: 0.18,
-    backgroundColor: 'pink'
+    flex: 0.18
   },
   containerAd: {
     flex: 1

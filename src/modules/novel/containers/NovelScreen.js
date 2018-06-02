@@ -5,9 +5,12 @@ class NovelContainer extends Component {
   static navigatorStyle = {
     tabBarHidden: true
   }
+
   render () {
     return (
-      <Novel />
+      <Novel
+        novel={this.props.novel}
+      />
     )
   }
 }

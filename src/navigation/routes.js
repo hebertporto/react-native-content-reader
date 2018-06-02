@@ -9,6 +9,10 @@ const style = {
   navBarTextFontSize: Fonts.size.regular
 }
 
+const styleNovel = {
+  ...style,
+  navBarHidden: true
+}
 export const HOME_SCREEN = {
   screen: 'snr.home',
   title: 'Super Novel Reader',
@@ -18,7 +22,7 @@ export const HOME_SCREEN = {
 export const NOVEL_SCREEN = {
   screen: 'snr.novel',
   title: 'Novel',
-  navigatorStyle: style
+  navigatorStyle: styleNovel
 }
 
 export const BOOKMARK_SCREEN = {
