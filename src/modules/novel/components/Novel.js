@@ -7,6 +7,7 @@ import {
   View,
   ScrollView,
   Image,
+  TouchableOpacity,
   Animated
 } from 'react-native'
 import Divider from '../../shared/components/Divider'
@@ -81,7 +82,9 @@ class Novel extends Component {
         style={styles.containerImageBackground}
       >
         <View style={{width: '100%'}}>
-          <Icon name="arrow-back" size={30} style={{color: 'white'}}/>
+          <TouchableOpacity onPress={() => this.props.goBack()}>
+            <Icon name="arrow-back" size={30} style={{color: 'white'}}/>
+          </TouchableOpacity>
         </View>
         <ScrollView>
           <Animated.View style={[styles.imageCardContainer, {opacity: this.state.fadeAnim}]}>

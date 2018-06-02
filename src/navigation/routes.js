@@ -5,7 +5,7 @@ const style = {
   navBarBackgroundColor: '#2196F3',
   navBarTitleTextCentered: true,
   navBarButtonColor: '#FFFFFF',
-  navBarTextFontFamily: Fonts.type.kefa,
+  // navBarTextFontFamily: Fonts.type.kefa,
   navBarTextFontSize: Fonts.size.regular
 }
 
