@@ -1,21 +1,29 @@
 import React from 'react'
 import { View, Text, TouchableOpacity } from 'react-native'
 import {RkButton} from 'react-native-ui-kitten'
+import moment from 'moment'
 
 import { styles } from './styles/ItemChapter.style'
 
+const checkDate = (chapterDate) => {
+  const todayTimestamp = new Date().getTime() + (30 * 24 * 60 * 60 * 1000)
+  if (todayTimestamp < chapterDate) {
+    return moment(chapterDate).startOf('day').fromNow()
+  }
+  return moment(chapterDate).format('DD.MM.YYYY')
+}
 const rowChapter = (props) => (
-  <TouchableOpacity onPress={() => console.warn('go chapter')}>
+  <TouchableOpacity onPress={() => props.navigateToChapter(props.chapter)}>
     <View style={styles.row}>
       <View style={styles.containerNumber}>
-        <Text> 152 </Text>
+        <Text> {props.chapter.number} </Text>
       </View>
       <View style={styles.containerTitle}>
-        <Text numberOfLines={1}> titulo titulo titulo titulo titulo titulo titulo </Text>
+        <Text numberOfLines={1}> {props.chapter.title} </Text>
       </View>
       <View style={styles.containerDate}>
         <Text style={{fontSize: 9}}>
-          20.05.2018
+          {checkDate(props.chapter.created_at)}
         </Text>
       </View>
     </View>

@@ -12,6 +12,7 @@ class ChapterList extends Component {
     return <ChapterListRow
       chapter={item}
       protected={index % 2 === 0}
+      navigateToChapter={this.props.navigateToChapter}
     />
   }
   hideVideoButton = () => this.setState({adVideo: true})

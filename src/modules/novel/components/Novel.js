@@ -144,12 +144,8 @@ class Novel extends Component {
 
             <View style={{ flex: 1 }}>
               <ChapterList
-                chapters={[
-                  {_id: 1},
-                  {_id: 2},
-                  {_id: 4},
-                  {_id: 6},
-                  {_id: 7}]}
+                chapters={this.props.chaptersTitles}
+                navigateToChapter={this.props.navigateToChapter}
               />
             </View>
 

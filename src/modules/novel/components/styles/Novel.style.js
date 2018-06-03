@@ -98,7 +98,7 @@ export const styles = StyleSheet.create({
   },
   button: {
     height: 20,
-    width: 70,
+    width: 90,
     marginTop: 15,
     backgroundColor: Colors.primaryBlue
   },

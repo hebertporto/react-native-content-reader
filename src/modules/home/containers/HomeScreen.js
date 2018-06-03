@@ -11,7 +11,11 @@ class HomeContainer extends Component {
     novels: []
   }
   componentDidMount = () => {
+    console.log('componentDidMount')
     this.fetchNovels()
+  }
+  componentWillUnmount() {
+    console.log('componentWillUnmount')
   }
 
   fetchNovels = async () => {
