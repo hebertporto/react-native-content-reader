@@ -10,13 +10,24 @@ export const styles = StyleSheet.create({
     flexDirection: 'column'
   },
   headerContainer: {
-    flex: 1
+    flex: 0.15,
+    paddingTop: 20,
+    marginHorizontal: 30
+  },
+  iconWithText: {
+    flex: 1,
+    flexDirection: 'row'
   },
   textContainer: {
-    flex: 1
+    flex: 0.85
   },
   textChapter: {
-    paddingBottom: 20
+    paddingTop: 20,
+    paddingBottom: 20,
+    marginHorizontal: 30,
+    fontSize: 16,
+    lineHeight: 20,
+    color: 'black'
   },
   textNoticeEndOfChapter: {
     paddingBottom: 40
@@ -24,6 +35,7 @@ export const styles = StyleSheet.create({
   footerContainer: {
     flex: 0.1,
     width: '100%',
-    backgroundColor: 'yellow'
+    justifyContent: 'center',
+    alignItems: 'center'
   }
 })

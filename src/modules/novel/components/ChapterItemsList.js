@@ -2,13 +2,13 @@ import React from 'react'
 import { View, Text, TouchableOpacity } from 'react-native'
 import {RkButton} from 'react-native-ui-kitten'
 import moment from 'moment'
-
 import { styles } from './styles/ItemChapter.style'
 
 const checkDate = (chapterDate) => {
-  const todayTimestamp = new Date().getTime() + (30 * 24 * 60 * 60 * 1000)
-  if (todayTimestamp < chapterDate) {
-    return moment(chapterDate).startOf('day').fromNow()
+  const today = parseInt(moment(new Date()).format('YYYYMMDD'), 10)
+  const date = parseInt(moment(chapterDate).format('YYYYMMDD'), 10)
+  if ((today - date) < 30) {
+    return moment(chapterDate).startOf('hour').fromNow()
   }
   return moment(chapterDate).format('DD.MM.YYYY')
 }

@@ -11,14 +11,14 @@ export const styles = StyleSheet.create({
     padding: 8 * 2,
     borderBottomWidth: 1,
     borderBottomColor: 'rgba(179, 177, 177, 0.6)',
-    backgroundColor: 'transparent',
+    backgroundColor: 'white',
     flex: 1
   },
   rowAdvertising: {
     flexDirection: 'row',
     borderBottomWidth: 1,
     borderBottomColor: 'rgba(179, 177, 177, 0.6)',
-    backgroundColor: 'transparent',
+    backgroundColor: 'white',
     flex: 1
   },
   containerNumber: {

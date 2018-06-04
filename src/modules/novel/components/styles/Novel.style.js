@@ -38,63 +38,75 @@ export const styles = StyleSheet.create({
     width: boxWidth,
     borderRadius: 10,
     borderWidth: 0,
-    backgroundColor: '#fff',
+    backgroundColor: 'white',
     bottom: bottonBodyContainer
   },
   bodyContent: {
     paddingTop: textPadding,
-    flex: 1
+    flex: 1,
+    backgroundColor: 'white',
+    borderRadius: 10
   },
   title: {
     ...Fonts.style.h6,
     color: '#000',
-    textAlign: 'center'
+    textAlign: 'center',
+    backgroundColor: 'white'
   },
   scanContainer: {
     flex: 1,
     flexDirection: 'column',
     justifyContent: 'space-between',
+    backgroundColor: 'white',
     paddingLeft: 15,
-    paddingRight: 15
+    paddingRight: 15,
+    paddingTop: 10
   },
   lastChapterContainer: {
     flex: 1,
     flexDirection: 'row',
     paddingLeft: 15,
     paddingRight: 15,
-    marginTop: 10
+    marginTop: 10,
+    backgroundColor: 'white'
   },
   descriptionContainer: {
     flex: 1,
     flexDirection: 'column',
+    backgroundColor: 'white',
     paddingLeft: 15,
     paddingRight: 15,
-    marginTop: 10
+    paddingTop: 10
   },
   labelContainer: {
     flex: 1,
-    flexDirection: 'row'
+    flexDirection: 'row',
+    backgroundColor: 'white'
   },
   labelContainerText: {
     ...Fonts.style.tiny,
     lineHeight: 16,
-    paddingLeft: 2
+    paddingLeft: 2,
+    backgroundColor: 'white'
   },
   labelContainerTextChapter: {
     ...Fonts.style.tiny,
     lineHeight: 16,
     paddingLeft: 2,
-    marginLeft: 5
+    marginLeft: 5,
+    backgroundColor: 'white'
   },
   labelContainerTextDate: {
     fontSize: 10,
     lineHeight: 15,
-    paddingLeft: 2
+    paddingLeft: 2,
+    backgroundColor: 'white'
   },
   buttonWrapper: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    backgroundColor: 'white'
   },
   button: {
     height: 20,

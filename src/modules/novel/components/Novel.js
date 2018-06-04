@@ -24,7 +24,7 @@ class Novel extends Component {
     novel: {
       _id: '',
       author: '',
-      cover_url: '',
+      cover_url: 'https://res.cloudinary.com/dwvrdf3zg/image/upload/v1528075421/39711543-blank-wallpapers_dbfjkh.png',
       name: '',
       translation_team: '',
       description: ''
@@ -86,7 +86,7 @@ class Novel extends Component {
             <Icon name="arrow-back" size={30} style={{color: 'white'}}/>
           </TouchableOpacity>
         </View>
-        <ScrollView>
+        <ScrollView style={{backgroundColor: 'transparent'}}>
           <Animated.View style={[styles.imageCardContainer, {opacity: this.state.fadeAnim}]}>
             <View style={styles.imageBox}>
               <Image
@@ -103,7 +103,7 @@ class Novel extends Component {
               </Text>
             </View>
 
-            <Divider />
+            {/* <Divider /> */}
 
             <View style={styles.scanContainer}>
               <View style={styles.labelContainer}>
@@ -116,7 +116,7 @@ class Novel extends Component {
               </View>
             </View>
 
-            <View style={[styles.scanContainer, {marginTop: 5}]}>
+            <View style={styles.scanContainer}>
               <View style={styles.labelContainer}>
                 <Icon name="translate" size={14} />
                 <Text style={styles.labelContainerText}>{translation_team}</Text>
@@ -140,7 +140,7 @@ class Novel extends Component {
               </View>
             </View>
 
-            <Divider />
+            {/* <Divider /> */}
 
             <View style={{ flex: 1 }}>
               <ChapterList

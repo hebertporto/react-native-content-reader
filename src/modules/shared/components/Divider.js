@@ -11,7 +11,8 @@ const Divider = () => {
         flex: 1,
         marginTop: 7,
         marginBottom: 7,
-        alignSelf: 'center'
+        alignSelf: 'center',
+        backgroundColor: 'white'
       }}
     />
   )
