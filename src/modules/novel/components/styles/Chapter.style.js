@@ -30,9 +30,10 @@ export const styles = StyleSheet.create({
     color: 'black'
   },
   textNoticeEndOfChapter: {
-    paddingBottom: 40
+    paddingBottom: 15,
+    textAlign: 'center'
   },
-  footerContainer: {
+  adContainer: {
     flex: 0.1,
     width: '100%',
     justifyContent: 'center',

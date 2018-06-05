@@ -21,7 +21,6 @@ class HomeContainer extends Component {
   fetchNovels = async () => {
     const novels = await getAllNovels()
     this.setState({ novels })
-    console.log('novels', novels)
   }
 
   navigateToNovel = (novel) => {

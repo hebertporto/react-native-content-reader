@@ -19,7 +19,7 @@ export const styles = StyleSheet.create({
   imageCardContainer: {
     flex: 1,
     alignItems: 'center',
-    paddingTop: 35,
+    paddingTop: 10,
     elevation: 15
   },
   imageBox: {
@@ -116,5 +116,17 @@ export const styles = StyleSheet.create({
   },
   buttonContent: {
     fontSize: 10
+  },
+  backbutton: {
+    width: '100%',
+    marginTop: 15,
+    marginLeft: 25
+  },
+  circleBack: {
+    width: '9%',
+    borderRadius: 80,
+    borderWidth: 2,
+    borderColor: '#A9B2BA',
+    elevation: 1
   }
 })

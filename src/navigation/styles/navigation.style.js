@@ -16,8 +16,8 @@ export const navigatorStyleFavoritos = {
   navBarBackgroundColor: Colors.navbarBackground,
   navBarTitleTextCentered: true,
   navBarButtonColor: Colors.white,
-  navBarTextFontFamily: Fonts.type.emphasis,
-  navBarTextFontSize: Fonts.size.regular
+  // navBarTextFontFamily: Fonts.type.emphasis,
+  navBarTextFontSize: Fonts.size.h6
 }
 
 export const navigatorStyleOffline = {
@@ -25,8 +25,8 @@ export const navigatorStyleOffline = {
   navBarBackgroundColor: Colors.navbarBackground,
   navBarTitleTextCentered: true,
   navBarButtonColor: Colors.white,
-  navBarTextFontFamily: Fonts.type.emphasis,
-  navBarTextFontSize: Fonts.size.regular
+  // navBarTextFontFamily: Fonts.type.emphasis,
+  navBarTextFontSize: Fonts.size.h6
 }
 
 export const appStyleMain = {
@@ -34,7 +34,7 @@ export const appStyleMain = {
   tabBarButtonColor: Colors.tabBarButtonColor,
   tabBarSelectedButtonColor: Colors.navbarBackground,
   screenBackgroundColor: Colors.screen,
-  tabFontFamily: Fonts.type.base,
+  // tabFontFamily: Fonts.type.base,
   tabFontSize: Fonts.size.tiny,
   selectedTabFontSize: Fonts.size.small,
   initialTabIndex: 0

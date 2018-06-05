@@ -8,9 +8,8 @@ import {
   ScrollView,
   Image,
   TouchableOpacity,
-  Animated
+  ActivityIndicator
 } from 'react-native'
-import Divider from '../../shared/components/Divider'
 import Icon from 'react-native-vector-icons/MaterialIcons'
 
 import { styles } from './styles/Novel.style.js'
@@ -18,7 +17,6 @@ import ChapterList from './ChapterList'
 
 class Novel extends Component {
   state = {
-    fadeAnim: new Animated.Value(0.3),
     hideFullDescription: true,
     description: '',
     novel: {
@@ -29,26 +27,18 @@ class Novel extends Component {
       translation_team: '',
       description: ''
     },
-    textToogle: 'VER MAIS'
+    textToogle: 'VER MAIS',
+    loading: true
   }
+
   componentDidMount() {
-    Animated.timing(
-      this.state.fadeAnim,
-      {
-        toValue: 1,
-        duration: 1500
-      }
-    ).start()
     this.setNovel(this.props.novel)
   }
 
   setNovel = async (novel) => {
-    await this.setState({novel})
+    await this.setState({novel, loading: false})
     this.renderDescription()
   }
-  // componentWillReceiveProps(nextProps) {
-  //   console.log('component novel', nextProps)
-  // }
 
   toogleText = async () => {
     await this.setState((prevState) => {
@@ -81,13 +71,16 @@ class Novel extends Component {
         source={{ uri: cover_url }}
         style={styles.containerImageBackground}
       >
-        <View style={{width: '100%'}}>
-          <TouchableOpacity onPress={() => this.props.goBack()}>
-            <Icon name="arrow-back" size={30} style={{color: 'white'}}/>
-          </TouchableOpacity>
+        <View style={styles.backbutton}>
+          <View>
+            <TouchableOpacity onPress={() => this.props.goBack()}>
+              <Icon name="arrow-back" size={30} style={{color: '#A9B2BA'}}/>
+            </TouchableOpacity>
+          </View>
         </View>
         <ScrollView style={{backgroundColor: 'transparent'}}>
-          <Animated.View style={[styles.imageCardContainer, {opacity: this.state.fadeAnim}]}>
+          <View style={styles.imageCardContainer}>
+
             <View style={styles.imageBox}>
               <Image
                 style={styles.image}
@@ -95,7 +88,7 @@ class Novel extends Component {
                   uri: cover_url }}
               />
             </View>
-          </Animated.View>
+          </View>
           <View style={styles.bodyContainer}>
             <View style={styles.bodyContent}>
               <Text style={styles.title}>
@@ -147,6 +140,7 @@ class Novel extends Component {
                 chapters={this.props.chaptersTitles}
                 navigateToChapter={this.props.navigateToChapter}
               />
+              <ActivityIndicator size="large" color="#0000ff" animating={this.state.loading}/>
             </View>
 
           </View>
