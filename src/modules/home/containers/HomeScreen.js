@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { View, StyleSheet } from 'react-native'
+import { viewTracker } from '../../../config/analytics'
 
 import { ListNovels } from '../components/ListNovels'
 
@@ -11,11 +12,8 @@ class HomeContainer extends Component {
     novels: []
   }
   componentDidMount = () => {
-    console.log('componentDidMount')
+    viewTracker('HomeScreen')
     this.fetchNovels()
-  }
-  componentWillUnmount() {
-    console.log('componentWillUnmount')
   }
 
   fetchNovels = async () => {

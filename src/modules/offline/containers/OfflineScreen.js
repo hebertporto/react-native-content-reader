@@ -1,7 +1,11 @@
 import React, { Component } from 'react'
 import { View, Text, StyleSheet } from 'react-native'
+import { viewTracker } from '../../../config/analytics';
 
 class OfflineContainer extends Component {
+  componentDidMount() {
+    viewTracker('OfflineScreen')
+  }
   render () {
     return (
       <View>

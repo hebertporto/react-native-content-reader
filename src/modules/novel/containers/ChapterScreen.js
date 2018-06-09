@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Chapter from '../components/Chapter'
 import { getChapterById } from '../../../services/backend/novelService'
+import { viewTracker } from '../../../config/analytics'
 
 class ChapterContainer extends Component {
   static navigatorStyle = {
@@ -12,6 +13,7 @@ class ChapterContainer extends Component {
   }
 
   componentDidMount() {
+    viewTracker(this.props.trackChapter)
     const { chapterProps } = this.props
     this.getChapter(chapterProps._id)
   }

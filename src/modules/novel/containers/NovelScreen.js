@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Novel from '../components/Novel'
 import { HOME_SCREEN, CHAPTER_SCREEN } from '../../../navigation/routes'
 import { getNovelChapters } from '../../../services/backend/novelService'
+import { viewTracker } from '../../../config/analytics'
 
 class NovelContainer extends Component {
   static navigatorStyle = {
@@ -11,13 +12,13 @@ class NovelContainer extends Component {
     titles: []
   }
   componentDidMount = () => {
+    viewTracker(` Novel - ${this.props.novel.name}`)
     const { _id } = this.props.novel
     this.getChaptersTitle(_id)
   }
 
   getChaptersTitle = async (id) => {
     const titles = await getNovelChapters(id)
-    console.log('=*=', titles)
     this.setState({titles})
   }
 
@@ -25,7 +26,7 @@ class NovelContainer extends Component {
   navigateToChapter = (chapterProps) => {
     this.props.navigator.push({
       ...CHAPTER_SCREEN,
-      passProps: {chapterProps},
+      passProps: {chapterProps, trackChapter: `${this.props.novel.name} - ${chapterProps.number}`},
       title: this.props.novel.name,
       subtitle: `${chapterProps.number} - ${chapterProps.title}`
     })
