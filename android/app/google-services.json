@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "226807698547",
+    "firebase_url": "https://super-novel-reader-d6a44.firebaseio.com",
+    "project_id": "super-novel-reader-d6a44",
+    "storage_bucket": "super-novel-reader-d6a44.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:226807698547:android:165bea05879e4517",
+        "android_client_info": {
+          "package_name": "com.superleitorapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "226807698547-ffc4oo4qqjkk4jjh3072pl360mi5g9p6.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "226807698547-ffc4oo4qqjkk4jjh3072pl360mi5g9p6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwrEJWmiu7qstOUWXx2ihrsciR3O4GWAg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
