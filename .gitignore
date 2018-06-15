@@ -58,3 +58,5 @@ buck-out/
 yarn.lock
 *.log
 *.env
+
+google-services.json
