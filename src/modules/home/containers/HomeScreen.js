@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import OneSignal from 'react-native-onesignal'
 import { View, StyleSheet } from 'react-native'
 import { viewTracker } from '../../../config/analytics'
 
@@ -12,6 +13,8 @@ class HomeContainer extends Component {
     novels: []
   }
   componentDidMount = () => {
+    OneSignal.init('3e3a533f-4041-421d-90f1-036b523a6dcc')
+
     viewTracker('HomeScreen')
     this.fetchNovels()
   }

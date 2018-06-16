@@ -3,6 +3,7 @@ package com.superleitorapp;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.geektime.rnonesignalandroid.ReactNativeOneSignalPackage;
 import com.idehub.GoogleAnalyticsBridge.GoogleAnalyticsBridgePackage;
 import com.oblador.vectoricons.VectorIconsPackage;
 import org.devio.rn.splashscreen.SplashScreenReactPackage;
@@ -29,6 +30,7 @@ public class MainApplication extends NavigationApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+          new ReactNativeOneSignalPackage(),
           new GoogleAnalyticsBridgePackage(),
           new VectorIconsPackage(),
           new SplashScreenReactPackage()
@@ -53,9 +55,9 @@ public class MainApplication extends NavigationApplication {
       return Arrays.<ReactPackage>asList(
           new RNAdMobPackage(),
           new VectorIconsPackage(),
+          new ReactNativeOneSignalPackage(),
           new GoogleAnalyticsBridgePackage(),
           new SplashScreenReactPackage()
-
       );
   }
 

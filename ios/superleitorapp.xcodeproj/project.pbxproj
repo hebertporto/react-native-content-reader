@@ -79,6 +79,7 @@
 		97939DF9CD7746D988A549BE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFC1CE84BD784584972B974B /* SystemConfiguration.framework */; };
 		BFFF968BB451469C97E35241 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 812365087BBD4A93B09333F2 /* libz.tbd */; };
 		48816BB3D3E04B60B5FEADA5 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 50320261289A46828C500F52 /* libsqlite3.0.tbd */; };
+		15DAFE30A6E243BAADBC7AA2 /* libRCTOneSignal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C0423D6EE3864FC7B62CDEC2 /* libRCTOneSignal.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -444,6 +445,8 @@
 		CFC1CE84BD784584972B974B /* SystemConfiguration.framework */ = {isa = PBXFileReference; name = "SystemConfiguration.framework"; path = "System/Library/Frameworks/SystemConfiguration.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 		812365087BBD4A93B09333F2 /* libz.tbd */ = {isa = PBXFileReference; name = "libz.tbd"; path = "usr/lib/libz.tbd"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = sourcecode.text-based-dylib-definition; explicitFileType = undefined; includeInIndex = 0; };
 		50320261289A46828C500F52 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; name = "libsqlite3.0.tbd"; path = "usr/lib/libsqlite3.0.tbd"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = sourcecode.text-based-dylib-definition; explicitFileType = undefined; includeInIndex = 0; };
+		A57A2B2511314600BE91596E /* RCTOneSignal.xcodeproj */ = {isa = PBXFileReference; name = "RCTOneSignal.xcodeproj"; path = "../node_modules/react-native-onesignal/ios/RCTOneSignal.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		C0423D6EE3864FC7B62CDEC2 /* libRCTOneSignal.a */ = {isa = PBXFileReference; name = "libRCTOneSignal.a"; path = "libRCTOneSignal.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -480,6 +483,7 @@
 				97939DF9CD7746D988A549BE /* SystemConfiguration.framework in Frameworks */,
 				BFFF968BB451469C97E35241 /* libz.tbd in Frameworks */,
 				48816BB3D3E04B60B5FEADA5 /* libsqlite3.0.tbd in Frameworks */,
+				15DAFE30A6E243BAADBC7AA2 /* libRCTOneSignal.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -674,6 +678,7 @@
 				49409B256F9B431CAAB3BC45 /* ReactNativeNavigation.xcodeproj */,
 				D1692C00E1A44F748C083F27 /* RNVectorIcons.xcodeproj */,
 				8862313F220949A5AE52480A /* RCTGoogleAnalyticsBridge.xcodeproj */,
+				A57A2B2511314600BE91596E /* RCTOneSignal.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1419,12 +1424,14 @@
 					"$(SRCROOT)/../node_modules/react-native-navigation/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-google-analytics-bridge/ios/RCTGoogleAnalyticsBridge/**",
+					"$(SRCROOT)/../node_modules/react-native-onesignal/ios/**",
 				);
 				INFOPLIST_FILE = superleitorappTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1450,12 +1457,14 @@
 					"$(SRCROOT)/../node_modules/react-native-navigation/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-google-analytics-bridge/ios/RCTGoogleAnalyticsBridge/**",
+					"$(SRCROOT)/../node_modules/react-native-onesignal/ios/**",
 				);
 				INFOPLIST_FILE = superleitorappTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1482,6 +1491,7 @@
 					"$(SRCROOT)/../node_modules/react-native-navigation/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-google-analytics-bridge/ios/RCTGoogleAnalyticsBridge/**",
+					"$(SRCROOT)/../node_modules/react-native-onesignal/ios/**",
 				);
 				INFOPLIST_FILE = superleitorapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1507,6 +1517,7 @@
 					"$(SRCROOT)/../node_modules/react-native-navigation/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-google-analytics-bridge/ios/RCTGoogleAnalyticsBridge/**",
+					"$(SRCROOT)/../node_modules/react-native-onesignal/ios/**",
 				);
 				INFOPLIST_FILE = superleitorapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1539,11 +1550,13 @@
 					"$(SRCROOT)/../node_modules/react-native-navigation/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-google-analytics-bridge/ios/RCTGoogleAnalyticsBridge/**",
+					"$(SRCROOT)/../node_modules/react-native-onesignal/ios/**",
 				);
 				INFOPLIST_FILE = "superleitorapp-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1579,11 +1592,13 @@
 					"$(SRCROOT)/../node_modules/react-native-navigation/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-google-analytics-bridge/ios/RCTGoogleAnalyticsBridge/**",
+					"$(SRCROOT)/../node_modules/react-native-onesignal/ios/**",
 				);
 				INFOPLIST_FILE = "superleitorapp-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1618,11 +1633,13 @@
 					"$(SRCROOT)/../node_modules/react-native-navigation/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-google-analytics-bridge/ios/RCTGoogleAnalyticsBridge/**",
+					"$(SRCROOT)/../node_modules/react-native-onesignal/ios/**",
 				);
 				INFOPLIST_FILE = "superleitorapp-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1657,11 +1674,13 @@
 					"$(SRCROOT)/../node_modules/react-native-navigation/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-google-analytics-bridge/ios/RCTGoogleAnalyticsBridge/**",
+					"$(SRCROOT)/../node_modules/react-native-onesignal/ios/**",
 				);
 				INFOPLIST_FILE = "superleitorapp-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
