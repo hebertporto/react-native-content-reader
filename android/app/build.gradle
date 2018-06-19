@@ -1,5 +1,6 @@
 apply plugin: 'com.onesignal.androidsdk.onesignal-gradle-plugin'
 apply plugin: "com.android.application"
+apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"
 
 import com.android.build.OutputFile
 
@@ -21,7 +22,7 @@ android {
         applicationId "com.superleitorapp"
         minSdkVersion 16
         targetSdkVersion 27
-        versionCode 10
+        versionCode 12
         versionName "2.2"
         multiDexEnabled true
         ndk {
@@ -69,6 +70,7 @@ android {
 }
 
 dependencies {
+    compile project(':react-native-config')
     compile project(':react-native-onesignal')
     // compile 'com.google.android.gms:play-services-vision:11.8.0'
     compile project(':react-native-google-analytics-bridge')

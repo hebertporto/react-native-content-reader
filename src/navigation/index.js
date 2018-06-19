@@ -11,6 +11,8 @@ import {
   appStyleMain
 } from './styles/navigation.style'
 
+import './buttons'
+
 import { HOME_SCREEN, BOOKMARK_SCREEN, OFFLINE_SCREEN } from './routes'
 
 const store = createStore()

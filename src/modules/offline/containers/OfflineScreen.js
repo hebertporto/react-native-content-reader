@@ -1,11 +1,23 @@
 import React, { Component } from 'react'
 import { View, Text, StyleSheet } from 'react-native'
-import { viewTracker } from '../../../config/analytics';
+import { viewTracker } from '../../../config/analytics'
+import { getAllOfflineChapters } from '../../../services/app/offlineChapterService'
 
 class OfflineContainer extends Component {
   componentDidMount() {
     viewTracker('OfflineScreen')
+    this.store()
   }
+
+  store = async () => {
+    try {
+      const list = await getAllOfflineChapters()
+      console.log('lista offiline', list)
+    } catch (error) {
+      console.log('deu error ', error)
+    }
+  }
+
   render () {
     return (
       <View>

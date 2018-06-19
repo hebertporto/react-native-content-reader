@@ -26,7 +26,11 @@ class NovelContainer extends Component {
   navigateToChapter = (chapterProps) => {
     this.props.navigator.push({
       ...CHAPTER_SCREEN,
-      passProps: {chapterProps, trackChapter: `${this.props.novel.name} - ${chapterProps.number}`},
+      passProps: {
+        chapterProps,
+        trackChapter: `${this.props.novel.name} - ${chapterProps.number}`,
+        novelName: this.props.novel.name
+      },
       title: this.props.novel.name,
       subtitle: `${chapterProps.number} - ${chapterProps.title}`
     })
